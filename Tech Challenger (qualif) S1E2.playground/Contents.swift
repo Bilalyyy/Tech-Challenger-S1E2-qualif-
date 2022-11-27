@@ -4,11 +4,9 @@ func load(file named: String) -> String? {
     guard let fileUrl = Bundle.main.url(forResource: named, withExtension: "txt") else {
         return nil
     }
-    
     guard let content = try? String(contentsOf: fileUrl, encoding: .utf8) else {
         return nil
     }
-    
     return content
 }
 
@@ -16,16 +14,17 @@ for numExo in 1...3 {
 
     var line = load(file: "input\(numExo)")!
 
-    let linessplit = line.split(separator: " ")
+    let linesSplit = line.split(separator: " ")
 
     var lineoccur = [Int]()
 
-    for item in linessplit {
+    for item in linesSplit {
         let test = Int(item)
         lineoccur.append(test!)
     }
+
     var output = ""
-    //var tabBefortOutput = [String]
+
     lineoccur.forEach { number in
         switch number {
         case 1:
