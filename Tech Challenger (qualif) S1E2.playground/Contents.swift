@@ -57,7 +57,6 @@ for numExo in 1...3 {
             output.append("n")
         case 555:
             output.append("o")
-
         case 6:
             output.append("p")
         case 66:
